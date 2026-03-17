@@ -24,7 +24,7 @@ Hi! I am Ammar Obaid, a cybersecurity enthusiast with experience in penetration 
 
 ### Certificate Images
 ![CCNA](ccna.jpg)  
-![CCT](cct.jpg)  
+![CCT](CCT_Fast_Track_GIG.jpg)  
 ![NCSCJO Training](ncscjo_training.jpg)  
 ![Green Circle Training](green_circle_training.jpg)  
 
