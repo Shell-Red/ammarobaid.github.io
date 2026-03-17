@@ -56,5 +56,7 @@ A Security Operations Center dashboard to visualize alerts, logs, and threat act
 ## Contact
 
 🔗 LinkedIn: (https://www.linkedin.com/in/ammar-obaid-406455262/)
+
 📧Email: ammar.eobeid@gmail.com  
+
 Phone Number: +962796555477
