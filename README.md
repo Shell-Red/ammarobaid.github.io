@@ -1,8 +1,6 @@
 
 # Ammar Obaid
 
-![Banner](https://via.placeholder.com/1200x300?text=Cybersecurity+Portfolio)
-
 Cybersecurity Enthusiast | SOC Analyst | Penetration Tester  
 Passionate about security tools development, SOC operations, and vulnerability assessment.
 
