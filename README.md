@@ -1,4 +1,4 @@
-# ammarobaid.github.io
+
 # Ammar Obaid
 
 Cybersecurity Enthusiast | SOC Analyst | Penetration Testing
