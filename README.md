@@ -34,11 +34,10 @@ Hi! I am Ammar Obaid, a cybersecurity enthusiast with experience in penetration 
 
 ### DAN-TOOLS
 A cybersecurity toolkit with multiple utilities for penetration testing and network security assessments.  
-[GitHub Link](https://github.com/username/DAN-TOOLS)
+[GitHub Link](https://github.com/Shell-Red/DAN-TOOLS)
 
 ### SOC Dashboard
 A Security Operations Center dashboard to visualize alerts, logs, and threat activities.  
-[GitHub Link](https://github.com/username/SOC-Dashboard)
 
 ---
 
