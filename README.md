@@ -18,7 +18,7 @@ Hi! I am Ammar Obaid, a cybersecurity enthusiast with experience in penetration 
 
 ### Certifications
 - **CCNA** – Cisco Certified Network Associate  
-- **CCT** – Cisco Certified Technician
+- **CCT** – cybersecurity Certified Technician
 
 ### Training
 - **NCSCJO** – National Cyber Security Center Jordan Training  
