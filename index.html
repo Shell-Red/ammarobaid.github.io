@@ -4,150 +4,155 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ammar Obaid - Cybersecurity Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- ==================== Navbar ==================== -->
-  <nav class="navbar">
-    <h2>Ammar</h2>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
+<!-- ==================== Navbar ==================== -->
+<nav class="navbar">
+  <h2>Ammar</h2>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="theme-toggle">
+    <i class="fas fa-moon"></i>
+  </div>
+</nav>
+
+<!-- ==================== Banner ==================== -->
+<section id="banner">
+  <img src="images/banner.jpg" alt="Cybersecurity Banner">
+  <h1>Ammar Obaid</h1>
+  <p id="typing"></p>
+  <a href="cv.pdf" download class="btn">Download CV</a>
+</section>
+
+<!-- ==================== About Me ==================== -->
+<section id="about">
+  <h2>About Me</h2>
+  <img src="images/profile.jpg" class="profile-img" alt="Ammar Obaid">
+  <p>
+    Cybersecurity enthusiast specialized in penetration testing, SOC operations, 
+    and security tools development.
+  </p>
+</section>
+
+<!-- ==================== What I Do ==================== -->
+<section id="whatido">
+  <h2>What I Do</h2>
+  <p>I focus on finding vulnerabilities, analyzing threats, and building secure systems.</p>
+</section>
+
+<!-- ==================== Experience ==================== -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card-container">
+    <div class="card">
+      <h3>NCSCJO</h3>
+      <p>Cybersecurity Trainee</p>
     </div>
-  </nav>
-
-  <!-- ==================== Banner ==================== -->
-  <section id="banner">
-    <img src="images/banner.jpg" alt="Cybersecurity Banner">
-    <h1>Ammar Obaid</h1>
-    <p id="typing"></p>
-    <a href="cv.pdf" download class="btn">Download CV</a>
-  </section>
-
-  <!-- ==================== About Me ==================== -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="images/profile.jpg" class="profile-img" alt="Ammar Obaid">
-    <p>
-      Cybersecurity enthusiast specialized in penetration testing, SOC operations, 
-      and security tools development.
-    </p>
-  </section>
-
-  <!-- ==================== What I Do ==================== -->
-  <section id="whatido">
-    <h2>What I Do</h2>
-    <p>I focus on finding vulnerabilities, analyzing threats, and building secure systems.</p>
-  </section>
-
-  <!-- ==================== Experience ==================== -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="card-container">
-      <div class="card">
-        <h3>NCSCJO</h3>
-        <p>Cybersecurity Trainee</p>
-      </div>
-      <div class="card">
-        <h3>Green Circle</h3>
-        <p>Cybersecurity Trainee</p>
-      </div>
+    <div class="card">
+      <h3>Green Circle</h3>
+      <p>Cybersecurity Trainee</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ==================== Certificates ==================== -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="card-container">
-      <div class="card">
-        <img src="images/ccna.jpg" alt="CCNA">
-        <h3>CCNA</h3>
-      </div>
-      <div class="card">
-        <img src="images/CCT_Fast_Track_GIG.jpg" alt="CCT">
-        <h3>CCT</h3>
-      </div>
-      <div class="card">
-        <img src="images/ncscjo_training.jpg" alt="NCSCJO">
-        <h3>NCSCJO</h3>
-      </div>
-      <div class="card">
-        <img src="images/green_circle_training.jpg" alt="Green Circle">
-        <h3>Green Circle</h3>
-      </div>
+<!-- ==================== Certificates ==================== -->
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="card-container">
+    <div class="card lightbox-card">
+      <img src="images/ccna.jpg" alt="CCNA">
+      <h3>CCNA</h3>
     </div>
-  </section>
+    <div class="card lightbox-card">
+      <img src="images/CCT_Fast_Track_GIG.jpg" alt="CCT">
+      <h3>CCT</h3>
+    </div>
+    <div class="card lightbox-card">
+      <img src="images/ncscjo_training.jpg" alt="NCSCJO">
+      <h3>NCSCJO</h3>
+    </div>
+    <div class="card lightbox-card">
+      <img src="images/green_circle_training.jpg" alt="Green Circle">
+      <h3>Green Circle</h3>
+    </div>
+  </div>
+</section>
 
-  <!-- ==================== Projects ==================== -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="card-container">
-      <div class="card">
+<!-- ==================== Projects Carousel ==================== -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
         <h3>DAN-TOOLS</h3>
-        <p>
-          A cybersecurity toolkit with multiple utilities for penetration testing 
-          and network security assessments.
-        </p>
+        <p>A cybersecurity toolkit with multiple utilities for penetration testing and network security assessments.</p>
         <a href="https://github.com/Shell-Red/DAN-TOOLS" target="_blank">View on GitHub</a>
       </div>
-      <div class="card">
+      <div class="carousel-item">
         <h3>SOC Dashboard</h3>
-        <p>
-          A Security Operations Center dashboard to visualize alerts, logs, and threat activities.
-        </p>
+        <p>A Security Operations Center dashboard to visualize alerts, logs, and threat activities.</p>
       </div>
     </div>
-  </section>
+    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
 
-  <!-- ==================== Tools ==================== -->
-  <section id="tools">
-    <h2>Tools</h2>
-    <ul>
-      <li>Wireshark</li>
-      <li>Burp Suite</li>
-      <li>Nmap</li>
-      <li>Metasploit</li>
-      <li>Splunk</li>
-    </ul>
-  </section>
+<!-- ==================== Skills ==================== -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <p>Penetration Testing</p>
+      <div class="progress"><div style="width: 90%"></div></div>
+    </div>
+    <div class="skill">
+      <p>SOC Monitoring</p>
+      <div class="progress"><div style="width: 85%"></div></div>
+    </div>
+    <div class="skill">
+      <p>Linux</p>
+      <div class="progress"><div style="width: 80%"></div></div>
+    </div>
+    <div class="skill">
+      <p>Python</p>
+      <div class="progress"><div style="width: 80%"></div></div>
+    </div>
+  </div>
+</section>
 
-  <!-- ==================== Skills ==================== -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Penetration Testing</li>
-      <li>SOC Monitoring</li>
-      <li>Linux</li>
-      <li>Python</li>
-      <li>Threat Intelligence</li>
-      <li>Cloud Security (AWS, Azure)</li>
-      <li>SIEM Tools (Splunk, ELK)</li>
-      <li>Incident Handling & Forensics</li>
-    </ul>
-  </section>
+<!-- ==================== Contact ==================== -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📧 Email: <a href="mailto:ammar.eobeid@gmail.com">ammar.eobeid@gmail.com</a></p>
+  <p>📱 Phone: +962796555477</p>
+  <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">LinkedIn Profile</a></p>
+</section>
 
-  <!-- ==================== Contact ==================== -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:ammar.eobeid@gmail.com">ammar.eobeid@gmail.com</a></p>
-    <p>📱 Phone: +962796555477</p>
-    <p>🔗 LinkedIn: 
-      <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">
-        LinkedIn Profile
-      </a>
-    </p>
-  </section>
+<!-- ==================== Lightbox Overlay ==================== -->
+<div id="lightbox-overlay">
+  <span class="close">&times;</span>
+  <img id="lightbox-img" src="" alt="Certificate">
+</div>
 
-  <!-- ==================== Scripts ==================== -->
-  <script src="js/script.js"></script>
+<!-- ==================== Scripts ==================== -->
+<script src="js/script.js"></script>
 </body>
 </html>
