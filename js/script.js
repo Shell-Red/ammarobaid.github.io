@@ -1,144 +1,54 @@
-/* ================= NAVBAR SHRINK ================= */
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('shrink', window.scrollY > 50);
-});
-
-
-/* ================= HAMBURGER ================= */
+// Hamburger
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+hamburger.addEventListener('click', ()=>navLinks.classList.toggle('show'));
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+// Dark Mode
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', ()=>{
+    document.body.classList.toggle('dark');
+    themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
 });
 
-
-/* ================= THEME TOGGLE ================= */
-const themeIcon = document.querySelector('.theme-toggle i');
-
-themeIcon.addEventListener('click', () => {
-  document.body.classList.toggle('light');
-  themeIcon.classList.toggle('fa-sun');
-});
-
-
-/* ================= SCROLL ANIMATION ================= */
-const sections = document.querySelectorAll('section');
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.2 });
-
-sections.forEach(section => {
-  sectionObserver.observe(section);
-});
-
-
-/* ================= LAZY LOADING ================= */
-const lazyImages = document.querySelectorAll('.lazy');
-
-const imageObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src;
-
-      img.onload = () => {
-        img.style.opacity = '1';
-      };
-
-      observer.unobserve(img);
-    }
-  });
-});
-
-lazyImages.forEach(img => imageObserver.observe(img));
-
-
-/* ================= TYPING EFFECT (PRO) ================= */
-const typingText = [
-  "Cybersecurity Expert",
-  "SOC Analyst",
-  "Penetration Tester"
-];
-
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-const typingEl = document.getElementById("typing");
-
-function typeEffect() {
-  const currentWord = typingText[wordIndex];
-
-  if (isDeleting) {
-    charIndex--;
-  } else {
-    charIndex++;
-  }
-
-  typingEl.textContent = currentWord.substring(0, charIndex);
-
-  let speed = isDeleting ? 40 : 70;
-
-  if (!isDeleting && charIndex === currentWord.length) {
-    speed = 1200;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    wordIndex = (wordIndex + 1) % typingText.length;
-    speed = 300;
-  }
-
-  setTimeout(typeEffect, speed);
+// Typing effect
+const typing = document.getElementById('typing');
+const words = ['Cybersecurity Enthusiast', 'Penetration Tester', 'SOC Analyst'];
+let i=0, j=0, currentWord='', isDeleting=false;
+function type(){
+    if(i>=words.length) i=0;
+    currentWord = words[i];
+    typing.textContent = currentWord.slice(0,j);
+    if(!isDeleting && j<currentWord.length){j++; setTimeout(type,150);}
+    else if(isDeleting && j>0){j--; setTimeout(type,100);}
+    else {isDeleting=!isDeleting; if(!isDeleting){i++;} setTimeout(type,1000);}
 }
+type();
 
-typeEffect();
-
-
-/* ================= SKILLS ANIMATION ================= */
-const skillsSection = document.getElementById('skills');
-const skillBars = document.querySelectorAll('.progress div');
-
-const skillsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      skillBars.forEach(bar => {
-        bar.style.width = bar.dataset.width;
-      });
+// Skills Animation
+const skills = document.querySelectorAll('.progress div');
+window.addEventListener('scroll', ()=>{
+    const skillsTop = document.getElementById('skills').offsetTop;
+    const scroll = window.scrollY + window.innerHeight;
+    if(scroll > skillsTop){
+        skills.forEach(skill=>skill.style.width = skill.dataset.width);
     }
-  });
-}, { threshold: 0.3 });
+});
 
-skillsObserver.observe(skillsSection);
-
-
-/* ================= LIGHTBOX ================= */
-const lightboxCards = document.querySelectorAll('.lightbox-card img');
-const lightboxOverlay = document.getElementById('lightbox-overlay');
+// Lightbox
+const lightbox = document.getElementById('lightbox-overlay');
 const lightboxImg = document.getElementById('lightbox-img');
-const lightboxClose = document.querySelector('#lightbox-overlay .close');
-
-lightboxCards.forEach(img => {
-  img.addEventListener('click', () => {
-    lightboxOverlay.style.display = 'flex';
-    lightboxImg.src = img.src;
-  });
+document.querySelectorAll('.lightbox-card img').forEach(img=>{
+    img.addEventListener('click', ()=>{
+        lightbox.style.display='flex';
+        lightboxImg.src = img.src;
+    });
 });
+document.querySelector('#lightbox-overlay .close').addEventListener('click', ()=>lightbox.style.display='none');
 
-lightboxClose.addEventListener('click', () => {
-  lightboxOverlay.style.display = 'none';
-});
-
-lightboxOverlay.addEventListener('click', (e) => {
-  if (e.target === lightboxOverlay) {
-    lightboxOverlay.style.display = 'none';
-  }
+// Smooth scroll
+document.querySelectorAll('.nav-links a').forEach(link=>{
+    link.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
 });
