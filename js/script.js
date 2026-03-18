@@ -32,7 +32,7 @@ function onScroll(){
   lazyImages.forEach(img=>{
     const rect = img.getBoundingClientRect();
     if(rect.top < window.innerHeight){
-      img.src = img.dataset.src;
+      if(!img.src) img.src = img.dataset.src;
       img.onload = ()=>img.style.opacity='1';
     }
   });
@@ -64,25 +64,6 @@ window.addEventListener('scroll', ()=>{
   if(rect.top < window.innerHeight-100){
     skills.forEach(bar => bar.style.width = bar.dataset.width);
   }
-});
-
-// Carousel
-const carouselInner = document.querySelector('.carousel-inner');
-const items = document.querySelectorAll('.carousel-item');
-let currentIndex = 0;
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
-
-function updateCarousel(){
-  carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-prevBtn.addEventListener('click', ()=>{
-  currentIndex = (currentIndex === 0) ? items.length-1 : currentIndex-1;
-  updateCarousel();
-});
-nextBtn.addEventListener('click', ()=>{
-  currentIndex = (currentIndex === items.length-1) ? 0 : currentIndex+1;
-  updateCarousel();
 });
 
 // Lightbox
