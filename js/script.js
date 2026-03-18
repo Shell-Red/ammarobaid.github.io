@@ -1,14 +1,27 @@
+// Scroll Animation
 const sections = document.querySelectorAll('section');
+
 window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const rect = section.getBoundingClientRect();
     if(rect.top < window.innerHeight - 100){
       section.style.opacity = 1;
       section.style.transform = 'translateY(0)';
-      section.style.transition = 'all 0.8s ease-out';
-    } else {
-      section.style.opacity = 0;
-      section.style.transform = 'translateY(50px)';
+      section.style.transition = '0.8s';
     }
   });
 });
+
+// Typing Effect
+const text = "Cybersecurity Expert | SOC Analyst | Penetration Tester";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 50);
+  }
+}
+
+typing();
