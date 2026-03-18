@@ -8,7 +8,7 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
 
-<!-- Font Awesome for icons -->
+<!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <!-- CSS -->
@@ -32,7 +32,9 @@
 
 <!-- Banner -->
 <section id="banner">
-  <img data-src="images/banner.jpg" alt="Cybersecurity Banner" class="lazy">
+  <div class="banner-wrapper">
+    <img data-src="images/banner.jpg" alt="Cybersecurity Banner" class="lazy">
+  </div>
   <h1>Ammar Obaid</h1>
   <p id="typing"></p>
   <a href="cv.pdf" download class="btn">Download CV</a>
@@ -71,23 +73,19 @@
   </div>
 </section>
 
-<!-- Projects Carousel -->
+<!-- Projects -->
 <section id="projects">
   <h2>Projects</h2>
-  <div class="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item">
-        <h3>DAN-TOOLS</h3>
-        <p>A cybersecurity toolkit with multiple utilities for penetration testing and network security assessments.</p>
-        <a href="https://github.com/Shell-Red/DAN-TOOLS" target="_blank">View on GitHub</a>
-      </div>
-      <div class="carousel-item">
-        <h3>SOC Dashboard</h3>
-        <p>A Security Operations Center dashboard to visualize alerts, logs, and threat activities.</p>
-      </div>
+  <div class="card-container">
+    <div class="card">
+      <h3>DAN-TOOLS</h3>
+      <p>A cybersecurity toolkit for penetration testing and network security assessments.</p>
+      <a href="https://github.com/Shell-Red/DAN-TOOLS" target="_blank" class="btn">View on GitHub</a>
     </div>
-    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+    <div class="card">
+      <h3>SOC Dashboard</h3>
+      <p>A Security Operations Center dashboard to visualize alerts, logs, and threat activities.</p>
+    </div>
   </div>
 </section>
 
