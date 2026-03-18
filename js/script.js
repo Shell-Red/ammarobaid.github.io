@@ -1,84 +1,144 @@
-// Navbar shrink
-window.addEventListener('scroll', ()=>{
-  const navbar = document.querySelector('.navbar');
-  if(window.scrollY > 50) navbar.classList.add('shrink');
-  else navbar.classList.remove('shrink');
+/* ================= NAVBAR SHRINK ================= */
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('shrink', window.scrollY > 50);
 });
 
-// Hamburger toggle
+
+/* ================= HAMBURGER ================= */
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-hamburger.addEventListener('click', ()=>navLinks.classList.toggle('show'));
 
-// Theme toggle
-const themeToggle = document.querySelector('.theme-toggle i');
-themeToggle.addEventListener('click', ()=>{
-  document.body.classList.toggle('light');
-  themeToggle.classList.toggle('fa-sun');
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
 });
 
-// Scroll animation + Lazy loading
+
+/* ================= THEME TOGGLE ================= */
+const themeIcon = document.querySelector('.theme-toggle i');
+
+themeIcon.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  themeIcon.classList.toggle('fa-sun');
+});
+
+
+/* ================= SCROLL ANIMATION ================= */
 const sections = document.querySelectorAll('section');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
+});
+
+
+/* ================= LAZY LOADING ================= */
 const lazyImages = document.querySelectorAll('.lazy');
 
-function onScroll(){
-  sections.forEach(section=>{
-    const rect = section.getBoundingClientRect();
-    if(rect.top < window.innerHeight-100){
-      section.style.opacity = '1';
-      section.style.transform = 'translateY(0)';
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+
+      img.onload = () => {
+        img.style.opacity = '1';
+      };
+
+      observer.unobserve(img);
     }
   });
-  lazyImages.forEach(img=>{
-    const rect = img.getBoundingClientRect();
-    if(rect.top < window.innerHeight){
-      if(!img.src) img.src = img.dataset.src;
-      img.onload = ()=>img.style.opacity='1';
-    }
-  });
-}
-window.addEventListener('scroll', onScroll);
-window.addEventListener('DOMContentLoaded', onScroll);
-
-// Typing effect
-const text = "Cybersecurity Expert | SOC Analyst | Penetration Tester";
-let i=0, forward=true;
-function typingEffect(){
-  const el = document.getElementById("typing");
-  if(forward){
-    el.innerHTML += text.charAt(i); i++;
-    if(i>=text.length) forward=false;
-  } else{
-    el.innerHTML = text.substring(0,i-1); i--;
-    if(i<=0) forward=true;
-  }
-  setTimeout(typingEffect,50);
-}
-typingEffect();
-
-// Skills animation
-const skills = document.querySelectorAll('.progress div');
-window.addEventListener('scroll', ()=>{
-  const skillsSection = document.getElementById('skills');
-  const rect = skillsSection.getBoundingClientRect();
-  if(rect.top < window.innerHeight-100){
-    skills.forEach(bar => bar.style.width = bar.dataset.width);
-  }
 });
 
-// Lightbox
+lazyImages.forEach(img => imageObserver.observe(img));
+
+
+/* ================= TYPING EFFECT (PRO) ================= */
+const typingText = [
+  "Cybersecurity Expert",
+  "SOC Analyst",
+  "Penetration Tester"
+];
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+const typingEl = document.getElementById("typing");
+
+function typeEffect() {
+  const currentWord = typingText[wordIndex];
+
+  if (isDeleting) {
+    charIndex--;
+  } else {
+    charIndex++;
+  }
+
+  typingEl.textContent = currentWord.substring(0, charIndex);
+
+  let speed = isDeleting ? 40 : 70;
+
+  if (!isDeleting && charIndex === currentWord.length) {
+    speed = 1200;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % typingText.length;
+    speed = 300;
+  }
+
+  setTimeout(typeEffect, speed);
+}
+
+typeEffect();
+
+
+/* ================= SKILLS ANIMATION ================= */
+const skillsSection = document.getElementById('skills');
+const skillBars = document.querySelectorAll('.progress div');
+
+const skillsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      skillBars.forEach(bar => {
+        bar.style.width = bar.dataset.width;
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+skillsObserver.observe(skillsSection);
+
+
+/* ================= LIGHTBOX ================= */
 const lightboxCards = document.querySelectorAll('.lightbox-card img');
 const lightboxOverlay = document.getElementById('lightbox-overlay');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxClose = document.querySelector('#lightbox-overlay .close');
 
-lightboxCards.forEach(img=>{
-  img.addEventListener('click', ()=>{
+lightboxCards.forEach(img => {
+  img.addEventListener('click', () => {
     lightboxOverlay.style.display = 'flex';
     lightboxImg.src = img.src;
   });
 });
-lightboxClose.addEventListener('click', ()=> lightboxOverlay.style.display='none');
-lightboxOverlay.addEventListener('click', e=>{
-  if(e.target===lightboxOverlay) lightboxOverlay.style.display='none';
+
+lightboxClose.addEventListener('click', () => {
+  lightboxOverlay.style.display = 'none';
+});
+
+lightboxOverlay.addEventListener('click', (e) => {
+  if (e.target === lightboxOverlay) {
+    lightboxOverlay.style.display = 'none';
+  }
 });
