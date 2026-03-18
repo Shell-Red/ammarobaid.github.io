@@ -13,13 +13,9 @@
 </head>
 <body>
 
-<!-- 🔥 Background Grid -->
-<div class="cyber-bg"></div>
-
 <!-- Navbar -->
 <nav class="navbar">
   <h2 class="logo">Ammar</h2>
-
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -27,145 +23,83 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-
+  <button id="theme-toggle">🌙</button>
   <div class="hamburger"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- Banner / Hero -->
+<!-- Hero Section -->
 <section id="banner" class="hero">
-
-  <div class="banner-wrapper">
-    <img data-src="images/banner.jpg" alt="Banner" class="lazy banner-img">
+  <div class="hero-content">
+    <h1 class="glow">Ammar Obaid</h1>
+    <p id="typing" class="mono"></p>
+    <a href="cv.pdf" download class="btn glow-btn">Download CV</a>
   </div>
-
-  <h1 class="glow">Ammar Obaid</h1>
-  <p id="typing" class="mono"></p>
-
-  <a href="cv.pdf" download class="btn glow-btn">Download CV</a>
-
 </section>
 
 <!-- About -->
 <section id="about">
   <h2 class="section-title">About Me</h2>
-
-  <img data-src="images/profile.jpg" class="profile-img lazy" alt="Profile">
-
-  <p>
-    Cybersecurity enthusiast specialized in penetration testing,
-    SOC operations, and security tools development.
-  </p>
+  <div class="about-wrapper">
+    <img src="images/profile.jpg" class="profile-img" alt="Profile">
+    <p>
+      Cybersecurity enthusiast specialized in penetration testing, SOC operations, and security tools development.
+    </p>
+  </div>
 </section>
 
 <!-- Experience -->
 <section id="experience">
   <h2 class="section-title">Experience</h2>
-
   <div class="card-container">
-
-    <div class="card">
-      <h3>NCSCJO</h3>
-      <p>Cybersecurity Trainee</p>
-    </div>
-
-    <div class="card">
-      <h3>Green Circle</h3>
-      <p>Cybersecurity Trainee</p>
-    </div>
-
+    <div class="card"><h3>NCSCJO</h3><p>Cybersecurity Trainee</p></div>
+    <div class="card"><h3>Green Circle</h3><p>Cybersecurity Trainee</p></div>
   </div>
 </section>
 
 <!-- Certificates -->
 <section id="certificates">
   <h2 class="section-title">Certificates</h2>
-
   <div class="card-container">
-
-    <div class="card lightbox-card">
-      <img data-src="images/ccna.jpg" class="lazy" alt="CCNA">
-      <h3>CCNA</h3>
-    </div>
-
-    <div class="card lightbox-card">
-      <img data-src="images/CCT_Fast_Track_GIG.jpg" class="lazy" alt="CCT">
-      <h3>CCT</h3>
-    </div>
-
-    <div class="card lightbox-card">
-      <img data-src="images/ncscjo_training.jpg" class="lazy" alt="NCSCJO">
-      <h3>NCSCJO</h3>
-    </div>
-
-    <div class="card lightbox-card">
-      <img data-src="images/green_circle_training.jpg" class="lazy" alt="Green Circle">
-      <h3>Green Circle</h3>
-    </div>
-
+    <div class="card lightbox-card"><img src="images/ccna.jpg" alt="CCNA"><h3>CCNA</h3></div>
+    <div class="card lightbox-card"><img src="images/CCT_Fast_Track_GIG.jpg" alt="CCT"><h3>CCT</h3></div>
+    <div class="card lightbox-card"><img src="images/ncscjo_training.jpg" alt="NCSCJO"><h3>NCSCJO</h3></div>
+    <div class="card lightbox-card"><img src="images/green_circle_training.jpg" alt="Green Circle"><h3>Green Circle</h3></div>
   </div>
 </section>
 
 <!-- Projects -->
 <section id="projects">
   <h2 class="section-title">Projects</h2>
-
   <div class="card-container">
-
     <div class="card">
       <h3>DAN-TOOLS</h3>
       <p>Cybersecurity toolkit for penetration testing.</p>
       <a href="https://github.com/Shell-Red/DAN-TOOLS" target="_blank" class="btn">GitHub</a>
     </div>
-
     <div class="card">
       <h3>SOC Dashboard</h3>
       <p>Visualize alerts, logs, and threat activities.</p>
     </div>
-
   </div>
 </section>
 
 <!-- Skills -->
 <section id="skills">
   <h2 class="section-title">Skills</h2>
-
   <div class="skills-container">
-
-    <div class="skill">
-      <p>Penetration Testing</p>
-      <div class="progress"><div data-width="90%"></div></div>
-    </div>
-
-    <div class="skill">
-      <p>SOC Monitoring</p>
-      <div class="progress"><div data-width="85%"></div></div>
-    </div>
-
-    <div class="skill">
-      <p>Linux</p>
-      <div class="progress"><div data-width="80%"></div></div>
-    </div>
-
-    <div class="skill">
-      <p>Python</p>
-      <div class="progress"><div data-width="80%"></div></div>
-    </div>
-
+    <div class="skill"><p>Penetration Testing</p><div class="progress"><div data-width="90%"></div></div></div>
+    <div class="skill"><p>SOC Monitoring</p><div class="progress"><div data-width="85%"></div></div></div>
+    <div class="skill"><p>Linux</p><div class="progress"><div data-width="80%"></div></div></div>
+    <div class="skill"><p>Python</p><div class="progress"><div data-width="80%"></div></div></div>
   </div>
 </section>
 
 <!-- Contact -->
 <section id="contact">
   <h2 class="section-title">Contact</h2>
-
   <p>Email: <a href="mailto:ammar.eobeid@gmail.com">ammar.eobeid@gmail.com</a></p>
   <p>Phone: +962796555477</p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">
-      View Profile
-    </a>
-  </p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">View Profile</a></p>
 </section>
 
 <!-- Lightbox -->
@@ -176,6 +110,5 @@
 
 <!-- JS -->
 <script src="js/script.js"></script>
-
 </body>
 </html>
