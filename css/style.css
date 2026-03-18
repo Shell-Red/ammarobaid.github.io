@@ -1,20 +1,26 @@
+/* خلفية احترافية */
 body {
   font-family: Arial, sans-serif;
   margin:0;
-  background:#0f172a;
+  background: radial-gradient(circle, #0f172a, #020617);
   color:#fff;
   scroll-behavior: smooth;
 }
 
+/* الأقسام */
 section {
-  padding:50px 20px;
+  padding:60px 20px;
   text-align:center;
   opacity: 0;
   transform: translateY(50px);
 }
 
-h1,h2,h3 { color:#38bdf8; }
+/* العناوين */
+h1,h2,h3 {
+  color:#38bdf8;
+}
 
+/* البانر */
 #banner {
   background:#1e293b;
   padding:100px 20px;
@@ -36,6 +42,11 @@ h1,h2,h3 { color:#38bdf8; }
   object-fit:cover;
   border:3px solid #38bdf8;
   margin-bottom:20px;
+  transition:0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
 }
 
 /* البطاقات */
@@ -43,31 +54,37 @@ h1,h2,h3 { color:#38bdf8; }
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:20px;
+  gap:25px;
 }
 
 .card {
   background:#1e293b;
   border-radius:15px;
   padding:20px;
-  width:250px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  width:260px;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  transform:translateY(-10px);
-  box-shadow:0 10px 20px rgba(0,0,0,0.5);
+  transform: scale(1.05);
+  box-shadow:0 15px 30px rgba(0,0,0,0.7);
 }
 
-.card img { width:100%; border-radius:10px; }
+/* صور داخل البطاقات */
+.card img {
+  width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
 
+/* المهارات والأدوات */
 ul {
   list-style:none;
   padding:0;
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:10px;
+  gap:12px;
 }
 
 ul li {
@@ -75,7 +92,43 @@ ul li {
   padding:10px 20px;
   border-radius:10px;
   display:inline-block;
+  transition:0.3s;
 }
 
-a { color:#facc15; text-decoration:none; }
-a:hover { text-decoration:underline; }
+ul li:hover {
+  background:#38bdf8;
+  color:black;
+}
+
+/* الروابط */
+a {
+  color:#facc15;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+/* زر تحميل CV */
+.btn {
+  display:inline-block;
+  margin-top:20px;
+  background:#38bdf8;
+  padding:12px 25px;
+  border-radius:10px;
+  color:black;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover {
+  background:#0ea5e9;
+  transform: scale(1.05);
+}
+
+/* تحسين Contact */
+#contact p {
+  margin:10px 0;
+}
