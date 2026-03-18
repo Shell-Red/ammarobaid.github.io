@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ammar Obaid - Cybersecurity Portfolio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Font Awesome for Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ammar Obaid - Cybersecurity Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-- ==================== Navbar ==================== -->
+<!-- Navbar -->
 <nav class="navbar">
-  <h2>Ammar</h2>
+  <h2 class="logo">Ammar</h2>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -23,41 +20,26 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="theme-toggle">
-    <i class="fas fa-moon"></i>
-  </div>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="theme-toggle"><i class="fas fa-moon"></i></div>
 </nav>
 
-<!-- ==================== Banner ==================== -->
+<!-- Banner -->
 <section id="banner">
-  <img src="images/banner.jpg" alt="Cybersecurity Banner">
+  <img data-src="images/banner.jpg" alt="Cybersecurity Banner" class="lazy">
   <h1>Ammar Obaid</h1>
   <p id="typing"></p>
   <a href="cv.pdf" download class="btn">Download CV</a>
 </section>
 
-<!-- ==================== About Me ==================== -->
+<!-- About -->
 <section id="about">
   <h2>About Me</h2>
-  <img src="images/profile.jpg" class="profile-img" alt="Ammar Obaid">
-  <p>
-    Cybersecurity enthusiast specialized in penetration testing, SOC operations, 
-    and security tools development.
-  </p>
+  <img data-src="images/profile.jpg" class="profile-img lazy" alt="Ammar Obaid">
+  <p>Cybersecurity enthusiast specialized in penetration testing, SOC operations, and security tools development.</p>
 </section>
 
-<!-- ==================== What I Do ==================== -->
-<section id="whatido">
-  <h2>What I Do</h2>
-  <p>I focus on finding vulnerabilities, analyzing threats, and building secure systems.</p>
-</section>
-
-<!-- ==================== Experience ==================== -->
+<!-- Experience -->
 <section id="experience">
   <h2>Experience</h2>
   <div class="card-container">
@@ -72,30 +54,18 @@
   </div>
 </section>
 
-<!-- ==================== Certificates ==================== -->
+<!-- Certificates -->
 <section id="certificates">
   <h2>Certificates</h2>
   <div class="card-container">
-    <div class="card lightbox-card">
-      <img src="images/ccna.jpg" alt="CCNA">
-      <h3>CCNA</h3>
-    </div>
-    <div class="card lightbox-card">
-      <img src="images/CCT_Fast_Track_GIG.jpg" alt="CCT">
-      <h3>CCT</h3>
-    </div>
-    <div class="card lightbox-card">
-      <img src="images/ncscjo_training.jpg" alt="NCSCJO">
-      <h3>NCSCJO</h3>
-    </div>
-    <div class="card lightbox-card">
-      <img src="images/green_circle_training.jpg" alt="Green Circle">
-      <h3>Green Circle</h3>
-    </div>
+    <div class="card lightbox-card"><img data-src="images/ccna.jpg" class="lazy" alt="CCNA"><h3>CCNA</h3></div>
+    <div class="card lightbox-card"><img data-src="images/CCT_Fast_Track_GIG.jpg" class="lazy" alt="CCT"><h3>CCT</h3></div>
+    <div class="card lightbox-card"><img data-src="images/ncscjo_training.jpg" class="lazy" alt="NCSCJO"><h3>NCSCJO</h3></div>
+    <div class="card lightbox-card"><img data-src="images/green_circle_training.jpg" class="lazy" alt="Green Circle"><h3>Green Circle</h3></div>
   </div>
 </section>
 
-<!-- ==================== Projects Carousel ==================== -->
+<!-- Projects Carousel -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="carousel">
@@ -115,30 +85,30 @@
   </div>
 </section>
 
-<!-- ==================== Skills ==================== -->
+<!-- Skills -->
 <section id="skills">
   <h2>Skills</h2>
   <div class="skills-container">
     <div class="skill">
       <p>Penetration Testing</p>
-      <div class="progress"><div style="width: 90%"></div></div>
+      <div class="progress"><div data-width="90%"></div></div>
     </div>
     <div class="skill">
       <p>SOC Monitoring</p>
-      <div class="progress"><div style="width: 85%"></div></div>
+      <div class="progress"><div data-width="85%"></div></div>
     </div>
     <div class="skill">
       <p>Linux</p>
-      <div class="progress"><div style="width: 80%"></div></div>
+      <div class="progress"><div data-width="80%"></div></div>
     </div>
     <div class="skill">
       <p>Python</p>
-      <div class="progress"><div style="width: 80%"></div></div>
+      <div class="progress"><div data-width="80%"></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== Contact ==================== -->
+<!-- Contact -->
 <section id="contact">
   <h2>Contact</h2>
   <p>📧 Email: <a href="mailto:ammar.eobeid@gmail.com">ammar.eobeid@gmail.com</a></p>
@@ -146,13 +116,12 @@
   <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">LinkedIn Profile</a></p>
 </section>
 
-<!-- ==================== Lightbox Overlay ==================== -->
+<!-- Lightbox Overlay -->
 <div id="lightbox-overlay">
   <span class="close">&times;</span>
   <img id="lightbox-img" src="" alt="Certificate">
 </div>
 
-<!-- ==================== Scripts ==================== -->
 <script src="js/script.js"></script>
 </body>
 </html>
