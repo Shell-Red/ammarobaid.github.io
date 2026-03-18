@@ -3,112 +3,133 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ammar Obaid | Cybersecurity Portfolio</title>
-
-<!-- Google Fonts -->
+<title>Ammar Emad Obeid | Cybersecurity Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap" rel="stylesheet">
-
-<!-- CSS -->
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar">
-  <h2 class="logo">Ammar</h2>
+  <div class="logo">Ammar Obeid</div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certificates">Certificates</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button id="theme-toggle">🌙</button>
-  <div class="hamburger"><span></span><span></span><span></span></div>
+  <div class="hamburger">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
 <!-- Hero Section -->
-<section id="banner" class="hero">
+<section class="hero" id="hero">
   <div class="hero-content">
-    <h1 class="glow">Ammar Obaid</h1>
-    <p id="typing" class="mono"></p>
-    <a href="cv.pdf" download class="btn glow-btn">Download CV</a>
+    <h1>Ammar Emad Obeid</h1>
+    <p>Cybersecurity Specialist</p>
+    <a href="CV.pdf" class="btn" download>Download CV</a>
+  </div>
+  <div class="hero-img">
+    <img src="images/profile.jpg" alt="Ammar Emad Obeid">
   </div>
 </section>
 
-<!-- About -->
-<section id="about">
-  <h2 class="section-title">About Me</h2>
-  <div class="about-wrapper">
-    <img src="images/profile.jpg" class="profile-img" alt="Profile">
-    <p>
-      Cybersecurity enthusiast specialized in penetration testing, SOC operations, and security tools development.
-    </p>
+<!-- About Section -->
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>I am Ammar Emad Obeid, a Cybersecurity Specialist based in Amman, Jordan. I specialize in penetration testing, network security assessments, and building secure systems. I am passionate about keeping data safe and leveraging technology to prevent cyber threats.</p>
+  <ul class="contact-info">
+    <li>Email: <a href="mailto:ammar.eobeid@gmail.com">ammar.eobeid@gmail.com</a></li>
+    <li>Phone: <a href="tel:+962796555477">+962796555477</a></li>
+    <li>Location: Amman, Jordan</li>
+  </ul>
+</section>
+
+<!-- Skills Section -->
+<section class="skills" id="skills">
+  <h2>Skills</h2>
+  <div class="skill-list">
+    <div class="skill">
+      <h3>Python</h3>
+      <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>JavaScript</h3>
+      <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Networking</h3>
+      <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Penetration Testing</h3>
+      <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Cybersecurity Tools</h3>
+      <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Soft Skills</h3>
+      <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- Experience -->
-<section id="experience">
-  <h2 class="section-title">Experience</h2>
-  <div class="card-container">
-    <div class="card"><h3>NCSCJO</h3><p>Cybersecurity Trainee</p></div>
-    <div class="card"><h3>Green Circle</h3><p>Cybersecurity Trainee</p></div>
-  </div>
-</section>
-
-<!-- Certificates -->
-<section id="certificates">
-  <h2 class="section-title">Certificates</h2>
-  <div class="card-container">
-    <div class="card lightbox-card"><img src="images/ccna.jpg" alt="CCNA"><h3>CCNA</h3></div>
-    <div class="card lightbox-card"><img src="images/CCT_Fast_Track_GIG.jpg" alt="CCT"><h3>CCT</h3></div>
-    <div class="card lightbox-card"><img src="images/ncscjo_training.jpg" alt="NCSCJO"><h3>NCSCJO</h3></div>
-    <div class="card lightbox-card"><img src="images/green_circle_training.jpg" alt="Green Circle"><h3>Green Circle</h3></div>
-  </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-  <h2 class="section-title">Projects</h2>
-  <div class="card-container">
-    <div class="card">
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <h2>Projects</h2>
+  <div class="project-list">
+    <div class="project">
       <h3>DAN-TOOLS</h3>
-      <p>Cybersecurity toolkit for penetration testing.</p>
-      <a href="https://github.com/Shell-Red/DAN-TOOLS" target="_blank" class="btn">GitHub</a>
+      <p>A cybersecurity toolkit for penetration testing and network security assessments.</p>
+      <a href="https://github.com/Shell-Red/DAN-TOOLS" target="_blank">View Project</a>
     </div>
-    <div class="card">
+    <div class="project">
       <h3>SOC Dashboard</h3>
-      <p>Visualize alerts, logs, and threat activities.</p>
+      <p>A Security Operations Center dashboard to visualize alerts, logs, and threat activities.</p>
+      <a href="#" target="_blank">View Project</a>
     </div>
   </div>
 </section>
 
-<!-- Skills -->
-<section id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-container">
-    <div class="skill"><p>Penetration Testing</p><div class="progress"><div data-width="90%"></div></div></div>
-    <div class="skill"><p>SOC Monitoring</p><div class="progress"><div data-width="85%"></div></div></div>
-    <div class="skill"><p>Linux</p><div class="progress"><div data-width="80%"></div></div></div>
-    <div class="skill"><p>Python</p><div class="progress"><div data-width="80%"></div></div></div>
+<!-- Certificates Section -->
+<section class="certificates" id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificate-list">
+    <div class="certificate"><img src="images/ccna.jpg" alt="CCNA Certificate"></div>
+    <div class="certificate"><img src="images/CCT_Fast_Track_GIG.jpg" alt="CCT Fast Track Certificate"></div>
+    <div class="certificate"><img src="images/green_circle_training.jpg" alt="Green Circle Training"></div>
+    <div class="certificate"><img src="images/ncscjo_training.jpg" alt="NCSCJO Training"></div>
   </div>
 </section>
 
-<!-- Contact -->
-<section id="contact">
-  <h2 class="section-title">Contact</h2>
-  <p>Email: <a href="mailto:ammar.eobeid@gmail.com">ammar.eobeid@gmail.com</a></p>
-  <p>Phone: +962796555477</p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">View Profile</a></p>
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/ammar-obaid-406455262/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Shell-Red" target="_blank">GitHub</a>
+  </div>
 </section>
 
-<!-- Lightbox -->
-<div id="lightbox-overlay">
-  <span class="close">&times;</span>
-  <img id="lightbox-img">
-</div>
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 Ammar Emad Obeid. All Rights Reserved.</p>
+</footer>
 
-<!-- JS -->
-<script src="js/script.js"></script>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({duration:1000, once:true});
+</script>
 </body>
 </html>
